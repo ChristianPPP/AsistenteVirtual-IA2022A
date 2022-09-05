@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Angel | </title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicons/favicon-16x16.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='/img/favicons/favicon.ico') }}">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='img/favicons/mstile-150x150.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='js/prism.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='js/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/theme.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='styles/user.min.css') }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<script>
+		const utterThis = new SpeechSynthesisUtterance()
+		const synth = window.speechSynthesis
+		function talk(resp) {
+			utterThis.text = resp
+			synth.speak(utterThis)
+		}
+	</script>
+  </head>
+
+  <body>
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/Logo.png') }}" alt="" style="width:145px ; opacity:0.7"/></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars text-white fs-3"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <h1 class="nav-item"><a class="nav-link active"  >Asistente virtual Angel</a></h1>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-dark"><img class="img-fluid position-absolute end-0" src="{{ url_for('static', filename='img/hero/hero-bg.png')}}" alt="" />
+      
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section>
+          <div class="container">
+            <div class="row align-items-center py-lg-8 py-6">
+              <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="text-white fs-5 fs-xl-6">Reconocimiento de voz</h1>
+                <p class="text-white py-lg-3 py-2">Angel es un asistente virtual integrado con varias funcionalidades.<br>   "El único limitante para la IA es la imaginación humana".<br> Chris Duffey </p>
+                <div class="d-sm-flex align-items-center gap-3" id="controls">
+                  <button id="recordButton" class="btn btn-success text-black mb-3 w-75">Grabar audio</button>
+                  <button id="stopButton" type="submit" value="Transcribe" disabled onclick="talk('{{ response }}');" class="btn btn-outline-light mb-3 w-75">Detener</button>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0"><img class="img-fluid" src="{{ url_for('static', filename='img/hero/hero-graphics.jpg') }}" alt="" style="border: 7px solid; opacity:0.8"  />
+                <table border = 1>
+                  {% for res in responses %}
+                  <tr>
+                    <th>Angel > {{ res }} </th>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </div>
+            </div>
+            <div class="swiper">
+              <div class="swiper-container swiper-shadow swiper-theme" data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide text-center"><img src="{{ url_for('static', filename='img/logos/boldo.png') }}" alt="" style="width: 145px;opacity:0.7" /></div>
+                  <div class="swiper-slide text-center"><img src="{{ url_for('static', filename='img/logos/presto.png') }}" alt="" style="width: 150px; opacity:0.7"/></div>
+                  <div class="swiper-slide text-center"><img src="{{ url_for('static', filename='img/logos/boldo.png') }}" alt="" style="width: 145px; opacity:0.7"/></div>
+                  <div class="swiper-slide text-center"><img src="{{ url_for('static', filename='img/logos/presto.png') }}" alt="" style="width: 150px; opacity:0.7"/></div>
+                  <div class="swiper-slide text-center"><img src="{{ url_for('static', filename='img/logos/boldo.png') }}" alt="" style="width: 145px; opacity:0.7"/></div>
+                  <div class="swiper-slide text-center"><img src="{{ url_for('static', filename='img/logos/presto.png') }}" alt=""style="width: 150px; opacity:0.7"/></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end of .container-->
+        </section><!-- <section> close ============================-->
+        <!-- ============================================-->
+
+      </div>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section>
+        <div class="container">
+          <p class="text-center fs-1">Información</p>
+          <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75">Reconocimiento de voz</h2>
+          <div class="row gx-xl-7 mt-5">
+            <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="{{ url_for('static', filename='img/services/1.jpg')}}"ame='img/services/1.jpg') }}" alt="" style="width:500px" />
+              <h4 class="mt-3 my-1">¿Qué es?</h4>
+              <p class="fs-1 mb-0">Es una rama de la inteligencia artificial cuya finalidad es posibilitar la comunicación entre humanos y sistemas informáticos.</p><a class="text-dark fs-1 pb-2 fw-bold border-black border-bottom text-decoration-none" href="#"></a>
+            </div>
+            <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="{{ url_for('static', filename='img/services/2.jpg')}}" ame='img/services/2.jpg') }}" alt="" style="width:500px"  />
+              <h4 class="mt-3 my-1">Características</h4>
+              <p class="fs-1 mb-0">Tiene la capacidad de detectar y entender las palabras que un ser humano emite de forma natural. <br>Su utilidad radica en el ahorro de tiempo y recursos en aquellas situaciones que lo ameritan. Ejemplo: En la medicina, ayuda a redactar informes de manera más rápida, los diagnósticos son más veloces, y la gestión general del trabajo médico es más óptima.</p><a class="text-dark fs-1 pb-2 fw-bold border-black border-bottom text-decoration-none" href="#"></a>
+            </div>
+            <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start"><img class="w-50 w-md-100" src="{{ url_for('static', filename='img/services/3.jpg')}}" ame='img/services/3.jpg') }}" alt="" style="width:500px" />
+              <h4 class="mt-3 my-1">Funcionamiento</h4>
+              <p class="fs-1 mb-0">1. El sistema detecta las palabras que un humano emite. <br>2. Convierte estas palabras en un formato que sea legible por la máquina. <br> 3. Según el mensaje recibido, el sistema procede a reaccionar. Esta reacción puede ser la ejecución de una orden, ofrecer una respuesta, o seguir el flujo de una conversación.</p><a class="text-dark fs-1 pb-2 fw-bold border-black border-bottom text-decoration-none" href="#"></a>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+      </section><!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-start"><img class="img-fluid" src="{{ url_for('static', filename='img/offer/1.jpg')}}" alt="" /></div>
+            <div class="col-lg-6">
+              <h1 class="fs-xl-5 fs-lg-4 fs-3">Ejemplos de aplicaciones del reconocimiento de voz.</h1>
+              <ul class="list-unstyled my-xl-5 my-3">
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Sistemas de coche.</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Dictado de voz.</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Control por comandos.</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Ámbito Telefónico.</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Dispositivos móviles.</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Sistemas para personas con discapacidad.</span></li>
+            
+            </div>
+          </div>
+        </div><!-- end of .container-->
+      </section><!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="pt-8 pt-lg-0">
+        <div class="container">
+          <div class="d-flex flex-column-reverse flex-lg-row">
+            <div class="col-lg-6">
+              <h1 class="fs-lg-4 fs-md-3 fs-xl-5 mb-5">Asistente virtual Angel</h1>
+              <ul class="list-unstyled">
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><span>El asistente virtual Angel cuenta con las siguientes funcionalidades:</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Conversaciones Comando: "Angel (cualquier cosa)"</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Búsqueda en youtube Comando: "Angel reproduce (cualquier cosa)"</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Abrir programas Comando: "Angel open (programa)"</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Búsquedas en internet Comando: "Angel search (página)"</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Traducción Comando: "Angel traduce (cualquier cosa)"</span></li>
+                <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black"><i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Completar frase Comando: "Angel complete (cualquier frase corta)"</span></li>
+              </ul>
+            </div>
+ 
+              <div class="col-lg-6 text-center text-lg-end"><img class="img-fluid" src="{{ url_for('static', filename='img/offer/2.jpg')}}" alt="" /></div>
+          </div>
+        </div><!-- end of .container-->
+      </section><!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-dark pt-6">
+        <div class="container">
+          <div class="col-md-6">
+            <h1 class="text-white fs-lg-5 fs-md-3 fs-2">Colaboradores</h1>
+          </div>
+          <div class="swiper mt-7">
+            <div class="swiper-container swiper-theme" data-swiper='{"slidesPerView":1,"breakpoints":{"640":{"slidesPerView":1,"spaceBetween":10},"768":{"slidesPerView":2,"spaceBetween":20},"1025":{"slidesPerView":3,"spaceBetween":40}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"navigation":{"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"},"loop":true,"freeMode":true,"loopedSlides":3}'>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <h4 class="mb-0 fw-bold text-dark">Poleth Arias</h4>
+                    <h4 class="text-black">Actualmente, estudia en la Escuela de Formación<br> de Tecnólogos en la carrera de Desarrollo<br> de Software.<br>Áreas de interés: Hardware, front-end, inteligencia artificial y análisis de datos</h4>
+                    <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ url_for('static', filename='img/review/1.jpg')}}"" alt="" style="width:70px" />
+                      <div class="text-black">
+                        <small>poleth.arias@epn.edu.ec</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <h4 class="mb-0 fw-bold text-dark">María José Chalá</h4>
+                    <h4 class="text-black">Actualmente, estudia en la Escuela de Formación<br> de Tecnólogos en la carrera de Desarrollo<br> de Software.<br>Áreas de interés: Análisis de datos, seguridad informática, inteligencia artificial</h4>
+                    <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ url_for('static', filename='img/review/2.jpg')}}" alt="" style="width:70px"/>
+                      <div class="text-black">
+                        <small>maria.chala@epn.edu.ec</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide bg-white p-5 rounded-3 h-auto">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <h4 class="mb-0 fw-bold text-dark">Christian Palacios</h4>
+                    <h4 class="text-black">Actualmente, estudia en la Escuela de Formación<br> de Tecnólogos en la carrera de Desarrollo<br> de Software.<br>Áreas de interés: Inteligencia artificial, hardware,backend, aplicaciones móviles. </h4>
+                    <div class="d-flex align-items-center gap-3 mt-5"><img src="{{ url_for('static', filename='img/review/3.jpg')}}" alt="" style="width:70px" />
+                      <div class="text-black">
+                        <p class="mb-0 fw-bold text-dark"></p><small>christian.palacios@epn.edu.ec</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				    <div style="max-width: 28em;">
+		<select id="encodingTypeSelect" style="opacity: 0;">
+		  <option value="wav" style="opacity: 0;">Waveform Audio (.wav)</option>
+		</select>
+		<div id="formats" style="opacity: 0;"></div>
+		<pre style="opacity: 0;">Log</pre>
+		<pre id="log" style="opacity: 0;"></pre>
+        <br>
+        <h3 style="opacity: 0;">Step 2 - Download your record </h3> 
+		
+		<ol id="recordingsList" style="opacity: 0;"></ol>
+	</div>
+
+
+                
+    </section><!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="{{ url_for('static', filename='js/WebAudioRecorder.min.js') }}" ></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}" ></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/anchor.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/is.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/all.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lodash.min.js') }}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="{{ url_for('static', filename='js/prism.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+  </body>
+
+</html>
