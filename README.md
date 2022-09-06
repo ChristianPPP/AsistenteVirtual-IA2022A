@@ -14,4 +14,4 @@ Video de explicación técnica del código y la funcionalidad: https://youtu.be/
 
 Video de manual de usuario: https://youtu.be/crf7l3lqmjs
 
-Informe:  [Informe](https://epnecuador-my.sharepoint.com/:b:/g/personal/maria_chala_epn_edu_ec/Ed8GS1kvk-1FgWtfcHlZK5IB6q2pH3nXARwxWJHs-qKY9g?e=K6FHqH)
+Link del informe:  [Informe](https://epnecuador-my.sharepoint.com/:b:/g/personal/maria_chala_epn_edu_ec/Ed8GS1kvk-1FgWtfcHlZK5IB6q2pH3nXARwxWJHs-qKY9g?e=K6FHqH)
