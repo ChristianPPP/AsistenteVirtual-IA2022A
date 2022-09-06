@@ -27,9 +27,18 @@ A partir de este método, se definieron los modelos a tomar en cuenta para imple
     - TextGeneration. -  Este método permite escribir contenidos automáticamente
 
 
+#
+En cuanto al desarrollo del Chatbot, fue necesario entrenar al bot para que detecte la intención en la entrada de texto del usuario, para ello, le proporcionamos a la herramienta algunas frases o palabras clave que recibirá como entradas y dependiendo de ello se ejecutará lo que el usuario pida, ya sea entablar una conversación o pedirle que realice consultas o abra un programa en específico, entre otros.
+
+![image](https://user-images.githubusercontent.com/74751902/188573507-305753e4-59b8-489a-9f76-aa13356fec7e.png)
+#
+
+
+
+
 ### Módulo de conversación 
 
-A.	Conversación con el asistente virtual
+
 Primero se importaron las librerías requeridas y las funciones fun1 y fun2, que contienen algunas funcionalidades que se implementaron para el Chatbot.
 
 ```
@@ -54,9 +63,6 @@ engine.setProperty('volume', 4.0)
 history = []
 responses = []
 ```
-
-En cuanto al desarrollo del Chatbot, fue necesario entrenar al bot para que detecte la intención en la entrada de texto del usuario, para ello, le proporcionamos a la herramienta algunas frases o palabras clave que recibirá como entradas y dependiendo de ello se ejecutará lo que el usuario pida, ya sea entablar una conversación o pedirle que realice consultas o abra un programa en específico, entre otros.
-
 
 
 
