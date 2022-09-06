@@ -17,7 +17,7 @@ Video de manual de usuario: https://youtu.be/crf7l3lqmjs
 Link del informe:  [Informe](https://epnecuador-my.sharepoint.com/:b:/g/personal/maria_chala_epn_edu_ec/Ed8GS1kvk-1FgWtfcHlZK5IB6q2pH3nXARwxWJHs-qKY9g?e=K6FHqH)
 
 # 
-### Explicación general📋
+### Explicación general 📑
 
 Para el reconocimiento automático del habla se utilizan varios algoritmos y técnicas de cálculo para reconocer el habla y convertirla en texto y mejorar la precisión de la transcripción. En dicho contexto, para la implementación de la página web se tomo en cuenta el siguiente método:
 -	Procesamiento de lenguaje natural (NLP). - es el área de la inteligencia artificial que se centra en la interacción entre humanos y máquinas a través del lenguaje y a través del habla y el texto. Muchos dispositivos móviles incorporan el reconocimiento de voz en sus sistemas para realizar búsquedas de voz, por ejemplo, Siri, o aumentar la accesibilidad de la escritura.
@@ -29,7 +29,7 @@ A partir de este método, se definieron los modelos a tomar en cuenta para imple
 
 #
 
-### Módulo de conversación con el asistente virtual
+### Módulo de conversación con el asistente virtual 💻
 
 
 Primero se importaron las librerías requeridas y las funciones fun1 y fun2, que contienen algunas funcionalidades que se implementaron para el Chatbot.
@@ -63,7 +63,7 @@ En cuanto al desarrollo del Chatbot, fue necesario entrenar al bot para que dete
 #
 
 
-### Módulo para traducir una palabra o texto 
+### Módulo para traducir una palabra o texto 🧾
 Para la implementación del traductor de texto, se definió la función predict1, en donde, a partir de la variable “translator” se inicializa el pipeline, que recibe como parámetros: el idioma al cual se desea traducir, en este caso se traducirá el texto a español; el modelo de procesamiento de lenguaje natural "Helsinki-NLP/opus-mt-en-es" para la respectiva traducción; y el tokenizer, que almacena el vocabulario del modelo establecido. Finalmente, a través de la variable “resul”, se presentará la traducción del texto ingresado.
  
 ![image](https://user-images.githubusercontent.com/74751902/188574353-6dd7ff8c-bae6-4980-9cfd-2296fb70c684.png)
@@ -75,7 +75,7 @@ Para que la implementación de este método funcioné, dentro de las funcionalid
 
 
 
-### Módulo para la generación de texto
+### Módulo para la generación de texto 🧾
 
 Para la implementación de este método, se definió la función predict2 en donde, a partir de la variable “text_gen_pipeline” se inicializa el pipeline, que recibe como primer parámetro “text-generation” que hace al generador de texto como tal; el siguiente parámetro que recibe es el modelo GPT-2 el cual es el más popular en la generación de lenguaje. Esta función retorna el texto generado en una variable llamada output como se muestra en la figura a continuacion.
 
