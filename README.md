@@ -13,3 +13,5 @@ El asistente virtual "Angel" implementa reonocimiento de voz para determinar que
 Video de explicación técnica del código y la funcionalidad: https://youtu.be/xthvE5shJZk
 
 Video de manual de usuario: https://youtu.be/crf7l3lqmjs
+
+Informe:[Informe](https://epnecuador-my.sharepoint.com/:b:/g/personal/maria_chala_epn_edu_ec/EY9BzCSffFtKt7Vz1Y0wArEBrUvW_ySVCaAJeYXZbmGNIA?e=Uaibgu)
