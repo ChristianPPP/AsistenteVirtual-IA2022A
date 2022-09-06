@@ -22,9 +22,9 @@ Link del informe:  [Informe](https://epnecuador-my.sharepoint.com/:b:/g/personal
 Para el reconocimiento automático del habla se utilizan varios algoritmos y técnicas de cálculo para reconocer el habla y convertirla en texto y mejorar la precisión de la transcripción. En dicho contexto, para la implementación de la página web se tomo en cuenta el siguiente método:
 -	Procesamiento de lenguaje natural (NLP). - es el área de la inteligencia artificial que se centra en la interacción entre humanos y máquinas a través del lenguaje y a través del habla y el texto. Muchos dispositivos móviles incorporan el reconocimiento de voz en sus sistemas para realizar búsquedas de voz, por ejemplo, Siri, o aumentar la accesibilidad de la escritura.
 A partir de este método, se definieron los modelos a tomar en cuenta para implementarlos como parte de las funcionalidades de la aplicación. A continuación, se detallan los modelos tomados en consideración: 
- - ChatBot. – Se implementó este modelo para mantener una charla fluida con el asistente virtual y que este sea capaz de responder a preguntas o peticiones que se realicen.
- -	Translate. – Este método permite traducir alguna palabra o frase.
- -	TextGeneration. -  Este método permite escribir contenidos automáticamente
+  - ChatBot. – Se implementó este modelo para mantener una charla fluida con el asistente virtual y que este sea capaz de responder a preguntas o peticiones que se realicen.
+  - -	Translate. – Este método permite traducir alguna palabra o frase.
+  - -	TextGeneration. -  Este método permite escribir contenidos automáticamente
 
 
 ### Módulo de conversación 
