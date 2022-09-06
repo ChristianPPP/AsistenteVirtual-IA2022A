@@ -28,15 +28,8 @@ A partir de este método, se definieron los modelos a tomar en cuenta para imple
 
 
 #
-En cuanto al desarrollo del Chatbot, fue necesario entrenar al bot para que detecte la intención en la entrada de texto del usuario, para ello, le proporcionamos a la herramienta algunas frases o palabras clave que recibirá como entradas y dependiendo de ello se ejecutará lo que el usuario pida, ya sea entablar una conversación o pedirle que realice consultas o abra un programa en específico, entre otros.
 
-![image](https://user-images.githubusercontent.com/74751902/188573507-305753e4-59b8-489a-9f76-aa13356fec7e.png)
-#
-
-
-
-
-### Módulo de conversación 
+### Módulo de conversación con el asistente virtual
 
 
 Primero se importaron las librerías requeridas y las funciones fun1 y fun2, que contienen algunas funcionalidades que se implementaron para el Chatbot.
@@ -64,17 +57,21 @@ history = []
 responses = []
 ```
 
+En cuanto al desarrollo del Chatbot, fue necesario entrenar al bot para que detecte la intención en la entrada de texto del usuario, para ello, le proporcionamos a la herramienta algunas frases o palabras clave que recibirá como entradas y dependiendo de ello se ejecutará lo que el usuario pida, ya sea entablar una conversación o pedirle que realice consultas o abra un programa en específico, entre otros.
+
+![image](https://user-images.githubusercontent.com/74751902/188573507-305753e4-59b8-489a-9f76-aa13356fec7e.png)
+#
 
 
 ### Módulo para traducir una palabra o texto 
 Para la implementación del traductor de texto, se definió la función predict1, en donde, a partir de la variable “translator” se inicializa el pipeline, que recibe como parámetros: el idioma al cual se desea traducir, en este caso se traducirá el texto a español; el modelo de procesamiento de lenguaje natural "Helsinki-NLP/opus-mt-en-es" para la respectiva traducción; y el tokenizer, que almacena el vocabulario del modelo establecido. Finalmente, a través de la variable “resul”, se presentará la traducción del texto ingresado.
  
-
+![image](https://user-images.githubusercontent.com/74751902/188574353-6dd7ff8c-bae6-4980-9cfd-2296fb70c684.png)
 
 
 Para que la implementación de este método funcioné, dentro de las funcionalidades que presenta el Chatbot, tenemos que, si al asistente se le presenta como entrada la palabra “translate” como se muestra en la figura a continuación, se accederá a la función para luego realizar el respectivo procedimiento mencionado anteriormente
  
-
+![image](https://user-images.githubusercontent.com/74751902/188574484-8d43b1b7-c70e-486f-a162-01dec42d8541.png)
 
 
 
@@ -82,9 +79,11 @@ Para que la implementación de este método funcioné, dentro de las funcionalid
 
 Para la implementación de este método, se definió la función predict2 en donde, a partir de la variable “text_gen_pipeline” se inicializa el pipeline, que recibe como primer parámetro “text-generation” que hace al generador de texto como tal; el siguiente parámetro que recibe es el modelo GPT-2 el cual es el más popular en la generación de lenguaje. Esta función retorna el texto generado en una variable llamada output como se muestra en la figura a continuacion.
 
+![image](https://user-images.githubusercontent.com/74751902/188574545-922c6456-e819-4200-9094-6dcde9c0fcf3.png)
 
 
 Para acceder a este método, si el asistente recibe como entrada la palabra “Complete”, se accederá a la función “predict2” que como ya se mencionó anteriormente, contiene toda la lógica para que dicho método funcione.
  
+![image](https://user-images.githubusercontent.com/74751902/188574620-b757a951-6080-4c64-9374-bfe47faed096.png)
 
 
